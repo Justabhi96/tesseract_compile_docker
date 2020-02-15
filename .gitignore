@@ -1,0 +1,6 @@
+ocr-files/
+pkg/
+temp/
+# virtualenv
+venv/
+.idea/
