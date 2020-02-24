@@ -71,4 +71,7 @@ RUN ${SCRIPTS_DIR}/compile_leptonica.sh
 RUN ${SCRIPTS_DIR}/compile_tesseract.sh
 RUN ${SCRIPTS_DIR}/build_deb_pkg.sh
 
+# to fix "Cannot read /usr/local/share/tessdata//pdf.ttf" error while converting image to PDF
+RUN cp ${TES_SRC_DIR}/tessdata/pdf.ttf ${TESSDATA_PREFIX}/pdf.ttf
+
 WORKDIR /home
